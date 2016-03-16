@@ -38,7 +38,7 @@ USER kioskuser
 ENV LANG ja_JP.utf8
 RUN export LANG=ja_JP.UTF-8
 
-RUN /bin/echo "/usr/local/freemind/freemind.sh &" >> /home/kioskuser/.vnc/xstartup
+RUN /bin/echo "exec sh /usr/local/freemind/freemind.sh" >> /home/kioskuser/.vnc/xstartup
 
 #EXPOSE 5901
 #ENTRYPOINT ["/usr/bin/vncserver","-fg"]
